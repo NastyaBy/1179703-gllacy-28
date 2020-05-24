@@ -23,16 +23,15 @@
           <a href="blank.html">О Компании</a>
         </li>
       </ul>
-      <a href="blank.html">
+      <button type="button">
         <img src="img/loupe.svg" width="16" height="16" alt="Поиск">
-      </a>
-      <a href="blank.html">
-        <img src="img/entrance.svg" width="20" height="19" alt="Вход">
-        Вход</a>
-      <a href="blank.html">
-        <img src="img/basket.svg" width="21" height="20" alt="Пусто">
-        <img src="img/basket-red.svg" width="21" height="20" alt="Есть товары">
-      </a>
+      </button>
+      <button type="button">
+        <img src="img/entrance.svg" width="20" height="19" alt="Вход">Вход
+      </button>
+      <button type="button">
+        <img src="img/basket.svg" width="21" height="20" alt="Пусто">Пусто
+      </button>
     </nav>
     <p>с 10 до 20, ежедневно</p>
     <a href="tel:88124502525">8 812 450-25-25</a>
@@ -208,6 +207,55 @@
       <copyright>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019</copyright>
     </div>
   </footer>
+
+  <div>
+    <ul>
+      <li>
+        <a href="blank.html">Новинки</a>
+      </li>
+      <li>
+        <a href="blank.html">Сливочное</a>
+      </li>
+      <li>
+        <a href="blank.html">Щербеты</a>
+      </li>
+      <li>
+        <a href="blank.html">Фруктовый лед</a>
+      </li>
+      <li>
+        <a href="blank.html">Мелорин</a>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <form method="GET">
+      <input type="text" required pattern="[A-Za-zА-Яа-яЁё]" placeholder="Крем-брюле">
+    </form>
+  </div>
+
+  <div>
+    <input type="email" name="email" required placeholder="email@example.com">
+    <input type="password" name="password" required placeholder="......">
+    <button type="submit">Войти</button>
+    <ul>
+      <li>
+        <a href="blank.html">Забыли пароль?</a>
+      </li>
+      <li>
+        <a href="blank.html">Новая регистрация</a>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>Мы обязательно вам ответим!</h2>
+    <img src="img/cross-big.svg" width="18" height="17" alt="Закрыть">
+    <input type="text" required pattern="[A-Za-zА-Яа-яЁё]" placeholder="Имя Фамилия">
+    <input type="email" name="email" required placeholder="email@example.com">
+    <textarea name="comment" cols="50" rows="6" required placeholder="В свободной форме"></textarea></p>
+    <button type="button" formaction="#">Отправить</button>
+  </div>
 </body>
 
 </html>
