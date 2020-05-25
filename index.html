@@ -14,27 +14,72 @@
       </a>
       <ul>
         <li>
-          <a href="catalog.html">Каталог</a>
+          <a href="catalog.html" aria-label="Каталог">Каталог
+            <ul>
+              <li>
+                <a href="blank.html" aria-label="Новинки">Новинки</a>
+              </li>
+              <li>
+                <a href="blank.html" aria-label="Сливочное">Сливочное</a>
+              </li>
+              <li>
+                <a href="blank.html" aria-label="Щербеты">Щербеты</a>
+              </li>
+              <li>
+                <a href="blank.html" aria-label="Фруктовый лед">Фруктовый лед</a>
+              </li>
+              <li>
+                <a href="blank.html" aria-label="Мелорин">Мелорин</a>
+              </li>
+            </ul>
+          </a>
         </li>
         <li>
-          <a href="blank.html">Доставка и оплата</a>
+          <a href="blank.html" aria-label="Доставка и оплата">Доставка и оплата</a>
         </li>
         <li>
-          <a href="blank.html">О Компании</a>
+          <a href="blank.html" aria-label="О Компании">О Компании</a>
         </li>
-      </ul>
-      <button type="button">
-        <img src="img/loupe.svg" width="16" height="16" alt="Поиск">
-      </button>
-      <button type="button">
-        <img src="img/entrance.svg" width="20" height="19" alt="Вход">Вход
-      </button>
-      <button type="button">
-        <img src="img/basket.svg" width="21" height="20" alt="Пусто">Пусто
-      </button>
     </nav>
+    </ul>
+    <button type="button" aria-label="Кнопка поиска">
+      <img src="img/loupe.svg" width="16" height="16" alt="Поиск">
+      <div>
+        <form method="get">
+          <label>
+            <input type="text" required pattern="[A-Za-zА-Яа-яЁё]" placeholder="Крем-брюле">
+          </label>
+          <button type="submit"></button>
+        </form>
+      </div>
+    </button>
+    <button type="button" aria-label="Кнопка входа">
+      <img src="img/entrance.svg" width="20" height="19" alt="Вход">Вход
+      <div>
+        <form method="get">
+          <label>
+            <input type="email" name="email" required placeholder="email@example.com" aria-label="Введите email адрес">
+          </label>
+          <label>
+            <input type="password" name="password" required placeholder="......" aria-label="Введите пароль">
+          </label>
+          <button type="submit" aria-label="Кнопка войти">Войти</button>
+        </form>
+        <ul>
+          <li>
+            <a href="blank.html" aria-label="Забыли пароль?">Забыли пароль?</a>
+          </li>
+          <li>
+            <a href="blank.html" aria-label="Зарегистрироваться">Новая регистрация</a>
+          </li>
+        </ul>
+      </div>
+    </button>
+    <button type="button" aria-label="Кнопка просмотра карины"></button>>
+    <img src="img/basket.svg" width="21" height="20" alt="Пусто">Пусто
+    </button>
     <p>с 10 до 20, ежедневно</p>
-    <a href="tel:88124502525">8 812 450-25-25</a>
+    <a href="tel:88124502525" aria-label="Позвонить нам на телефон 8 812 450-25-25">8 812 450-25-25</a>
   </header>
   <main>
     <h1>Gllacy Shop</h1>
@@ -57,9 +102,9 @@
             <a href="#">Давайте оба!</a>
           </li>
         </ul>
-        <button></button>
-        <button></button>
-        <button></button>
+        <button type="button" aria-label="Крем-брюле и пломбир с малиновым джемом"></button>
+        <button type="button" aria-label="Шоколадный пломбир и лимонный сорбет"></button>
+        <button type="button" aria-label="Пломбир с помадкой и клубничный щербет"></button>
       </div>
       <section>
         <ul>
@@ -68,14 +113,17 @@
             <h2>Малинка даром!</h2>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку маринового варенья бесплатно.
             <p>
-              <a href="#">Хочу варенье!</a>
+              <a href="#"
+                aria-label="При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку маринового варенья бесплатно">Хочу
+                варенье!</a>
           </li>
           <li>
             <img src="img/shakolad.jpg" width="560" height="299" alt="Шоколад">
             <h2>Шоколадки даром!</h2>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно
               бесплатно.</p>
-            <a href="#">Хочу шоколадки!</a>
+            <a href="#" aria-label="При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно
+            бесплатно">Хочу шоколадки!</a>
           </li>
           <li>
             <img src="img/hit.svg" width="61" height="61" alt="ХИТ">
@@ -133,18 +181,19 @@
       </ul>
     </section>
     <section>
-      <article>
+      <div>
         <img src="img/bg-news.jpg" width="560" height="220">
         <h2>Новое в нашем блоге</h2>
-        <a href="blank.html">10 способов сервировки фруктовых щербетов к столу</a>
-      </article>
+        <a href="blank.html" aria-label="Блог о 10 способах сервировки фруктовых щербетов к столу">10 способов
+          сервировки фруктовых щербетов к столу</a>
+      </div>
       <div>
         <img src="img/bg-post.svg">
         <p>Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе всего самого вкусного, что у нас происходит.
           Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
         <form>
-          <input type="text">
-          <button>Отправить</button>
+          <input type="text" aria-label="Введите ваш email для рассылки">
+          <button aria-label="Кнопка подписаться на рассылку">Отправить</button>
         </form>
       </div>
     </section>
@@ -154,31 +203,51 @@
       <p>Адрес главного офиса и офлайн-магазина:</p>
       <p>ул. Большая Конюшенная, 19/8, Санкт-Петербургул. Большая Конюшенная, 19/8, Санкт-Петербург</p>
       <p>Для заказов по телефону:</p>
-      <a href="tel:88124502525">8 812 450-25-25</a>
+      <a href="tel:88124502525" aria-label="Позвонить нам на телефон 8 812 450-25-25">8 812 450-25-25</a>
       <p>(с 10 до 20 ежедневно)</p>
-      <a href="blank.html">Форма обратной связи</a>
+      <a href="blank.html" aria-label="Кнопка написать нам">Форма обратной связи
+        <div>
+          <h2>Мы обязательно вам ответим!</h2>
+          <img src="img/cross-big.svg" width="18" height="17" alt="Закрыть форму обратной связи">
+          <form method="get">
+            <label>
+              <input type="text" required pattern="[A-Za-zА-Яа-яЁё]" placeholder="Имя Фамилия"
+                aria-label="Поле для ввода имени и фамилии">
+            </label>
+            <label>
+              <input type="email" name="email" required placeholder="email@example.com"
+                aria-label="Поле для ввода email адреса">
+            </label>
+            <label>
+              <textarea name="comment" cols="50" rows="6" required placeholder="В свободной форме"
+                aria-label="Поле для ввода сообщения"></textarea>
+            </label>
+            <button type="button" formaction="#" aria-label="Кнопка отправить сообщение">Отправить</button>
+          </form>
+        </div>
+      </a>
     </section>
   </main>
   <footer>
     <div>
       <ul>
         <li>
-          <a href="blank.html">
+          <a href="blank.html" aria-label="Ссылка на наш Твиттер">
             <img src="img/twitter.svg" width="32" height="32" alt="Твиттер">
           </a>
         </li>
         <li>
-          <a href="blank.html">
+          <a href="blank.html" aria-label="Ссылка на наш Инстаграм">
             <img src="img/instagram.svg" width="32" height="32" alt="Инстаграм">
           </a>
         </li>
         <li>
-          <a href="blank.html">
+          <a href="blank.html" aria-label="Ссылка на наш Фейсбук">
             <img src="img/fb.svg" width="32" height="32" alt="Фейсбук">
           </a>
         </li>
         <li>
-          <a href="blank.html">
+          <a href="blank.html" aria-label="Ссылка на нашу страницу в Вконтакте">
             <img src="img/vk.svg" width="32" height="32" alt="Вконтакте">
           </a>
         </li>
@@ -187,75 +256,28 @@
     <div>
       <ul>
         <li>
-          <a href="blank.html">
+          <a href="blank.html" aria-label="Ссылка на информацию для поставщиков">
             <img src="img/heart.svg" width="15" height="13">
             Для поставщиков</a>
         </li>
         <li>
-          <a href="blank.html">О производстве</a>
+          <a href="blank.html" aria-label="Ссылка на информацию о производстве">О производстве</a>
         </li>
         <li>
-          <a href="blank.html">Наши документы</a>
+          <a href="blank.html" aria-label="Ссылка на наши документы">Наши документы</a>
         </li>
         <li>
-          <a href="blank.html">Экологические стандарты</a>
+          <a href="blank.html" aria-label="Ссылка на экологические стандарты">Экологические стандарты</a>
         </li>
       </ul>
     </div>
     <div>
       <img src="img/logoacademy.svg" width="108" height="39" alt="Логотип HTML Academy">
-      <copyright>Сделано в <a href="https://htmlacademy.ru">HTML Academy</a> © 2019</copyright>
+      <copyright>Сделано в <a href="https://htmlacademy.ru" aria-label="Ссылка на разработчиков сайти">HTML Academy</a> ©
+        2019</copyright>
     </div>
   </footer>
 
-  <div>
-    <ul>
-      <li>
-        <a href="blank.html">Новинки</a>
-      </li>
-      <li>
-        <a href="blank.html">Сливочное</a>
-      </li>
-      <li>
-        <a href="blank.html">Щербеты</a>
-      </li>
-      <li>
-        <a href="blank.html">Фруктовый лед</a>
-      </li>
-      <li>
-        <a href="blank.html">Мелорин</a>
-      </li>
-    </ul>
-  </div>
-
-  <div>
-    <form method="GET">
-      <input type="text" required pattern="[A-Za-zА-Яа-яЁё]" placeholder="Крем-брюле">
-    </form>
-  </div>
-
-  <div>
-    <input type="email" name="email" required placeholder="email@example.com">
-    <input type="password" name="password" required placeholder="......">
-    <button type="submit">Войти</button>
-    <ul>
-      <li>
-        <a href="blank.html">Забыли пароль?</a>
-      </li>
-      <li>
-        <a href="blank.html">Новая регистрация</a>
-      </li>
-    </ul>
-  </div>
-
-  <div>
-    <h2>Мы обязательно вам ответим!</h2>
-    <img src="img/cross-big.svg" width="18" height="17" alt="Закрыть">
-    <input type="text" required pattern="[A-Za-zА-Яа-яЁё]" placeholder="Имя Фамилия">
-    <input type="email" name="email" required placeholder="email@example.com">
-    <textarea name="comment" cols="50" rows="6" required placeholder="В свободной форме"></textarea></p>
-    <button type="button" formaction="#">Отправить</button>
-  </div>
 </body>
 
 </html>
