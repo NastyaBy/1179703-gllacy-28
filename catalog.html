@@ -14,25 +14,24 @@
             </a>
             <ul>
                 <li>
-                    <a href="catalog.html" aria-label="Каталог">Каталог
-                        <ul>
-                            <li>
-                                <a href="blank.html" aria-label="Новинки">Новинки</a>
-                            </li>
-                            <li>
-                                <a href="blank.html" aria-label="Сливочное">Сливочное</a>
-                            </li>
-                            <li>
-                                <a href="blank.html" aria-label="Щербеты">Щербеты</a>
-                            </li>
-                            <li>
-                                <a href="blank.html" aria-label="Фруктовый лед">Фруктовый лед</a>
-                            </li>
-                            <li>
-                                <a href="blank.html" aria-label="Мелорин">Мелорин</a>
-                            </li>
-                        </ul>
-                    </a>
+                    <a href="catalog.html" aria-label="Каталог">Каталог</a>
+                    <ul>
+                        <li>
+                            <a href="blank.html" aria-label="Новинки">Новинки</a>
+                        </li>
+                        <li>
+                            <a href="blank.html" aria-label="Сливочное">Сливочное</a>
+                        </li>
+                        <li>
+                            <a href="blank.html" aria-label="Щербеты">Щербеты</a>
+                        </li>
+                        <li>
+                            <a href="blank.html" aria-label="Фруктовый лед">Фруктовый лед</a>
+                        </li>
+                        <li>
+                            <a href="blank.html" aria-label="Мелорин">Мелорин</a>
+                        </li>
+                    </ul>
                 </li>
                 <li>
                     <a href="blank.html" aria-label="Доставка и оплата">Доставка и оплата</a>
@@ -95,7 +94,55 @@
 
     <main>
         <div>
-            <p>Фильтр</p>
+            <form action="https://echo.htmlacademy.ru" method="get">
+                <fieldset>
+                    <label>Сортировка:
+                        <select>
+                            <option value="по популярности">по популярности</option>
+                            <option value="сначала недорогие">сначала недорогие</option>
+                            <option value="сначала дорогие">сначала дорогие</option>
+                            <option value="по жирности">по жирности</option>
+                        </select>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Цена:</legend>
+                    <label for="filter-min-cost">100 ₽</label>
+                    <span>-</span>
+                    <label for="filter-max-cost">500 ₽</label>
+                    <input type="range" name="cost" value="min-cost" id="filter-min-cost" min="100" max="500" size="1">
+                    <input type="range" name="cost" value="max-cost" id="filter-max-cost" min="100" max="500" size="1">
+
+                </fieldset>
+                <fieldset>
+                    <legend>Жирность:</legend>
+                    <input type="radio" name="fat" value="0-percent" id="filter-0-percent">
+                    <label for="filter-0-percent">0%</label>
+                    <input type="radio" name="fat" value="up-to-10-percent" id="filter-up-to-10-percent" checked>
+                    <label for="filter-up-to-10-percent">до 10%</label>
+                    <input type="radio" name="fat" value="up-to-30-percent" id="filter-up-to-30-percent">
+                    <label for="filter-up-to-30-percent">до 30%</label>
+                    <input type="radio" name="fat" value="above-30-percent" id="filter-above-30-percent">
+                    <label for="filter-above-30-percent">выше 30%</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Наполнители:</legend>
+                    <input type="checkbox" name="chocolate" id="filter-chocolate">
+                    <label for="filter-chocolate">шоколадные</label>
+                    <input type="checkbox" name="sugar-powders" id="filter-sugar-powders" checked>
+                    <label for="filter-sugar-powders">сахарные присыпки</label>
+                    <input type="checkbox" name="fruits" id="filter-fruits">
+                    <label for="filter-fruits">фрукты</label>
+                    <input type="checkbox" name="syrups" id="filter-syrups">
+                    <label for="filter-syrups">сиропы</label>
+                    <input type="checkbox" name="jams" id="filter-jams" checked>
+                    <label for="filter-american-crew">джемы</label>
+                </fieldset>
+                <button type="submit">Применить</button>
+                </fieldset>
+
+            </form>
         </div>
         <section>
             <ul>
