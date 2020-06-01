@@ -52,6 +52,8 @@
   --map-info-tel: var(--color2);
   --map-info-desc: var(--color2);
   --page-navigation-link: var(--color2);
+  --filter-button: var(--basic-white);
+  --page-navigation-link: var(--basic-white);
 }
 
 body {
@@ -94,6 +96,7 @@ img {
 }
 
 .site-navigation-button {
+  color: var(--navigation-button);
   background: var(--navigation-button);
   border-radius: 20px;
 }
@@ -263,6 +266,42 @@ img {
 .product-link {
   font-size: 18px;
   line-height: 24px;
+}
+
+.filter-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.form-select {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.form-label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.filter-button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--filter-button);
+}
+
+.page-navigation-item {
+  list-style-type: none;
+}
+
+.page-navigation-link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--page-navigation-link);
 }
 
 .page-navigation-link {
