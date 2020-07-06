@@ -125,14 +125,21 @@
   --filter-button: var(--basic-white);
   --form-select-hover: var(--basic-white);
   --form-select-hover-after: var(--color2);
-
+  --form-select-hover-form-select-input-color: var(--color2);
+  --filter-button-border: var(--basic-white);
   --backlight-filter-button-hover: var(--basic-white);
   --color-filter-button-hover: var(--color2);
   --backlight-filter-button-active: var(--basic-white);
   --color-filter-button-active: var(--color2);
   --box-shadow-filter-button-active: var(--color48);
   --page-navigation-link: var(--basic-white);
+  --page-navigation-link-hover-background: var(--color3);
+  --page-navigation-link-active-background-color: var(--basic-white);
+  --page-navigation-link-hover-page-navigation-link-active-background-color: var(
+    --basic-white
+  );
   --page-navigation-item-active: var(--color2);
+  --page-navigation-item-active-background-color: var(--basic-white);
   --page-navigation-arrow: var(--basic-white);
   --delimiter: var(--color3);
   --button-general-text: var(--basic-white);
@@ -151,6 +158,7 @@
   --bg1-backlight: var(--color15);
   --bg2-backlight: var(--color16);
   --bg3-backlight: var(--color18);
+  --product-hover-background: var(--color3);
   --product-price-text-shadow: var(--color44);
   --product-title-text-decoration-color: var(--color3);
   --color-news-title: var(--color2);
@@ -668,12 +676,19 @@ input[type="radio"].visually-hidden {
 .site-navigation-item:hover .dropdown-menu-list {
   display: block;
 }
+.site-navigation-item.dropdown.catalog:hover .dropdown-menu-list {
+  margin-top: 12px;
+}
+.site-navigation-item.dropdown.catalog:hover .dropdown-menu-list::before {
+  height: 12px;
+}
 
 .site-navigation-link {
   align-self: center;
   border-bottom: 1px solid var(--site-navigation-link-decoration-color);
 }
-.site-navigation-link:hover {
+.site-navigation-link:hover,
+.site-navigation-item.dropdown:hover .site-navigation-link {
   margin: -6px -14px;
   padding: 6px 14px;
   border-radius: 26px;
@@ -951,7 +966,7 @@ input[type="radio"].visually-hidden {
   z-index: 1;
   padding: 6px 13px 0;
   margin: -6px -13px -200px;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--product-hover-background);
   box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -1168,28 +1183,31 @@ input[type="radio"].visually-hidden {
 
 .map {
   position: relative;
+  padding: 62px 0;
 }
 
 .map-img {
-  width: 1200px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  margin: -62px 0 0 0;
   height: 430px;
-  display: block;
+  object-fit: cover;
 }
 
 .map-pin {
   position: absolute;
   top: 135px;
-  left: 239px;
+  left: 22%;
 }
 
 .map-info {
-  position: absolute;
-  top: 62px;
-  bottom: 62px;
-  right: 0;
-  width: 253px;
+  position: relative;
   display: flex;
   flex-direction: column;
+  width: 253px;
+  margin-left: auto;
   padding: 31px 25px;
   background: var(--background-map-info);
   border-radius: 16px;
@@ -1403,7 +1421,7 @@ input[type="radio"].visually-hidden {
     transparent;
 }
 .form-select:hover .form-select-input {
-  color: black;
+  color: var(--form-select-hover-form-select-input-color);
 }
 
 .form-select-input {
@@ -1539,7 +1557,7 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
   outline: none;
   background: var(--backlight-filter-component);
-  border: 2px solid var(--basic-white);
+  border: 2px solid var(--filter-button-border);
 }
 
 .filter-button:hover {
@@ -1583,21 +1601,23 @@ input[type="radio"].visually-hidden {
 
 .page-navigation-link-active {
   color: var(--page-navigation-item-active);
-  background-color: var(--basic-white);
+  background-color: var(--page-navigation-item-active-background-color);
 }
 
 .page-navigation-link:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--page-navigation-link-hover-background);
 }
 
 .page-navigation-link:hover.page-navigation-link-active {
   color: var(--page-navigation-item-active);
-  background-color: var(--basic-white);
+  background-color: var(
+    --page-navigation-link-hover-page-navigation-link-active-background-color
+  );
 }
 
 .page-navigation-link:active {
   color: var(--page-navigation-item-active);
-  background-color: var(--basic-white);
+  background-color: var(--page-navigation-link-active-background-color);
 }
 
 .page-navigation-arrow {
@@ -1724,6 +1744,7 @@ input[type="radio"].visually-hidden {
 
 .form-slider {
   position: relative;
+  z-index: 1;
   height: 2px;
   width: 200px;
   border-radius: 10px;
@@ -1868,7 +1889,7 @@ input[type="radio"].visually-hidden {
   margin-left: -14px;
   top: -49px;
   z-index: 3;
-  background-color: #1abc9c;
+  background-color: #d07058;
   color: #fff;
   width: 28px;
   height: 28px;
@@ -1891,7 +1912,7 @@ input[type="radio"].visually-hidden {
   border-right: 14px solid transparent;
   border-top-width: 16px;
   border-top-style: solid;
-  border-top-color: #1abc9c;
+  border-top-color: #d07058;
 }
 
 .form-slider-info .form-slider-info-sign-text {
