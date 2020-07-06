@@ -62,6 +62,8 @@
   --color51: rgba(255, 188, 158, 0.3);
   --color52: rgba(232, 77, 55, 0.3);
   --color53: rgba(0, 0, 0, 0.4);
+  --color54: rgba(255, 255, 255, 0.4);
+  --color55: rgba(255, 255, 255, 0.7);
 
   --a: var(--basic-white);
   --body-color: var(--basic-white);
@@ -97,11 +99,11 @@
   --dropdown-menu-item-pressing: var(--color46);
   --dropdown-menu-item-active: var(--color30);
   --dropdown-menu-link-active-text-color: var(--basic-white);
+  --dropdown-menu-list-box-shadow: var(--color53);
   --navigation-button-color: var(--basic-white);
   --navigation-button-bg: var(--color3);
   --navigation-svg-color: var(--basic-white);
   --navigation-svg-color-hover: var(--color29);
-
   --img-fill-basket-red: var(--color17);
   --navigation-container-popup-background: var(--color19);
   --navigation-container-popup-box-shadow: var(--color53);
@@ -114,7 +116,6 @@
   --basket-product-price-color: var(--color27);
   --basket-cost-color: var(--color2);
   --basket-text-color: var(--color2);
-
   --info-title: var(--color2);
   --info-list-text: var(--color2);
   --map-info-label: var(--color2);
@@ -122,6 +123,9 @@
   --map-info-tel: var(--color2);
   --map-info-desc: var(--color2);
   --filter-button: var(--basic-white);
+  --form-select-hover: var(--basic-white);
+  --form-select-hover-after: var(--color2);
+
   --backlight-filter-button-hover: var(--basic-white);
   --color-filter-button-hover: var(--color2);
   --backlight-filter-button-active: var(--basic-white);
@@ -141,6 +145,7 @@
   --button-general-box-shadow-active: var(--color43);
   --slider-navigation-button: var(--basic-white);
   --slider-navigation-button-hover-current: var(--basic-white);
+  --slider-navigation-button-background-hover: var(--color54);
   --slider-navigation-button-active: var(--basic-white);
   --slider-button-active-color: var(--basic-white);
   --bg1-backlight: var(--color15);
@@ -161,6 +166,10 @@
   --modal-info-title-color: var(--color2);
   --social-networks-link-hover-img-circle: var(--basic-white);
   --social-networks-link-active-img-circle: var(--basic-white);
+  --social-networks-link-img-stroke: var(--color6);
+  --social-networks-link-hover-img-stroke: var(--color6);
+  --social-networks-link-img-circle: var(--color8);
+  --social-networks-link-active-img-stroke: var(--color55);
 }
 
 body {
@@ -589,7 +598,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
   margin-top: 6px;
   background: var(--dropdown-menu-list-color);
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 20px var(--dropdown-menu-list-box-shadow);
   border-radius: 4px;
 }
 
@@ -861,7 +870,7 @@ input[type="radio"].visually-hidden {
 }
 
 .slider-navigation-button:hover {
-  background: rgba(255, 255, 255, 0.4);
+  background: var(--slider-navigation-button-background-hover);
 }
 
 .slider-navigation-button:hover.current {
@@ -1255,18 +1264,18 @@ input[type="radio"].visually-hidden {
 }
 
 .social-networks-link .img-stroke {
-  stroke: rgba(255, 255, 255, 0.5);
+  stroke: var(--social-networks-link-img-stroke);
 }
 
 .social-networks-link .img-circle {
-  fill: rgba(255, 255, 255, 0.8);
+  fill: var(--social-networks-link-img-circle);
 }
 
 .social-networks-link:hover {
 }
 
 .social-networks-link:hover .img-stroke {
-  stroke: rgba(255, 255, 255, 0.5);
+  stroke: var(--social-networks-link-hover-img-stroke);
 }
 
 .social-networks-link:hover .img-circle {
@@ -1277,7 +1286,7 @@ input[type="radio"].visually-hidden {
 }
 
 .social-networks-link:active .img-stroke {
-  stroke: rgba(255, 255, 255, 0.7);
+  stroke: var(--social-networks-link-active-img-stroke);
 }
 
 .social-networks-link:active .img-circle {
@@ -1374,7 +1383,7 @@ input[type="radio"].visually-hidden {
 }
 
 .form-select:hover {
-  background: white;
+  background: var(--form-select-hover);
 }
 .form-select:after {
   content: "";
@@ -1390,7 +1399,8 @@ input[type="radio"].visually-hidden {
 }
 
 .form-select:hover:after {
-  border-color: black transparent transparent transparent;
+  border-color: var(--form-select-hover-after) transparent transparent
+    transparent;
 }
 .form-select:hover .form-select-input {
   color: black;
