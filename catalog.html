@@ -4,8 +4,8 @@
     <meta charset="utf-8" />
     <title>HTML Academy: Глейси</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500,700&display=swap"
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
     />
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -32,7 +32,7 @@
                   <li class="dropdown-menu-item selection">
                     <a
                       class="dropdown-menu-link selection-text"
-                      href="blank.html"
+                      href=""
                       aria-label="Новинки"
                       >Новинки</a
                     >
@@ -40,32 +40,26 @@
                   <li class="dropdown-menu-item dropdown-menu-item-active">
                     <a
                       class="dropdown-menu-link dropdown-menu-link-active"
-                      href="blank.html"
+                      href=""
                       aria-label="Сливочное"
                       >Сливочное</a
                     >
                   </li>
                   <li class="dropdown-menu-item">
-                    <a
-                      class="dropdown-menu-link"
-                      href="blank.html"
-                      aria-label="Щербеты"
+                    <a class="dropdown-menu-link" href="" aria-label="Щербеты"
                       >Щербеты</a
                     >
                   </li>
                   <li class="dropdown-menu-item">
                     <a
                       class="dropdown-menu-link"
-                      href="blank.html"
+                      href=""
                       aria-label="Фруктовый лед"
                       >Фруктовый лед</a
                     >
                   </li>
                   <li class="dropdown-menu-item">
-                    <a
-                      class="dropdown-menu-link"
-                      href="blank.html"
-                      aria-label="Мелорин"
+                    <a class="dropdown-menu-link" href="" aria-label="Мелорин"
                       >Мелорин</a
                     >
                   </li>
@@ -74,16 +68,13 @@
               <li class="site-navigation-item">
                 <a
                   class="site-navigation-link"
-                  href="blank.html"
+                  href=""
                   aria-label="Доставка и оплата"
                   >Доставка и оплата</a
                 >
               </li>
               <li class="site-navigation-item">
-                <a
-                  class="site-navigation-link"
-                  href="blank.html"
-                  aria-label="О Компании"
+                <a class="site-navigation-link" href="" aria-label="О Компании"
                   >О Компании</a
                 >
               </li>
@@ -183,7 +174,7 @@
                 <li class="login-links-item">
                   <a
                     class="login-links-link"
-                    href="blank.html"
+                    href=""
                     aria-label="Забыли пароль?"
                     >Забыли пароль?</a
                   >
@@ -191,7 +182,7 @@
                 <li class="login-links-item">
                   <a
                     class="login-links-link"
-                    href="blank.html"
+                    href=""
                     aria-label="Зарегистрироваться"
                     >Новая регистрация</a
                   >
@@ -202,7 +193,7 @@
 
           <div class="navigation-container-item basket">
             <button
-              class="site-navigation-button"
+              class="site-navigation-button last"
               type="button"
               aria-label="Кнопка просмотра карзины"
             >
@@ -321,9 +312,9 @@
         </div>
       </div>
       <nav class="breadcrumbs-crumbs container">
-        <ul>
+        <ul class="breadcrumbs-crumbs-road">
           <li class="breadcrumbs-crumbs-item">
-            <a cclass="breadcrumbs-crumbs-link" href="index.html">Главная</a>
+            <a class="breadcrumbs-crumbs-link" href="index.html">Главная</a>
           </li>
 
           <li class="breadcrumbs-crumbs-item">
@@ -343,12 +334,20 @@
         <form class="filter" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="filter-item">
             <legend class="filter-title">Сортировка:</legend>
-            <label>
-              <select class="form-select">
-                <option value="по популярности">по популярности</option>
-                <option value="сначала недорогие">сначала недорогие</option>
-                <option value="сначала дорогие">сначала дорогие</option>
-                <option value="по жирности">по жирности</option>
+            <label class="form-select">
+              <select class="form-select-input">
+                <option class="form-select-optional" value="по популярности"
+                  >по популярности
+                </option>
+                <option class="form-select-optional" value="сначала недорогие"
+                  >сначала недорогие
+                </option>
+                <option class="form-select-optional" value="сначала дорогие"
+                  >сначала дорогие
+                </option>
+                <option class="form-select-optional" value="по жирности"
+                  >по жирности
+                </option>
               </select>
             </label>
           </fieldset>
@@ -358,101 +357,190 @@
               Цена: 100 ₽ - 500 ₽
             </legend>
 
-            <input
-              type="range"
-              name="cost"
-              value="min-cost"
-              id="filter-min-cost"
-              min="100"
-              max="500"
-              size="1"
-            />
+            <div class="filter-item-row outline">
+              <div class="form-slider" id="slider-distance">
+                <div class="form-slider-info">
+                  <div
+                    class="form-slider-info-inverse left"
+                    style="width: 70%;"
+                  ></div>
+                  <div
+                    class="form-slider-info-inverse right"
+                    style="width: 70%;"
+                  ></div>
+                  <div
+                    class="form-slider-info-range"
+                    style="left: 30%; right: 40%;"
+                  ></div>
+                  <span
+                    class="form-slider-info-thumb"
+                    style="left: 30%;"
+                  ></span>
+                  <span
+                    class="form-slider-info-thumb"
+                    style="left: 60%;"
+                  ></span>
+                  <div class="form-slider-info-sign" style="left: 30%;">
+                    <span class="form-slider-info-sign-text">30</span>
+                  </div>
+                  <div class="form-slider-info-sign" style="left: 60%;">
+                    <span class="form-slider-info-sign-text">60</span>
+                  </div>
+                </div>
+                <input
+                  type="range"
+                  tabindex="0"
+                  value="30"
+                  max="100"
+                  min="0"
+                  step="1"
+                  oninput="
+  this.value=Math.min(this.value,this.parentNode.childNodes[5].value-1);
+  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+  var children = this.parentNode.childNodes[1].childNodes;
+  children[1].style.width=value+'%';
+  children[5].style.left=value+'%';
+  children[7].style.left=value+'%';children[11].style.left=value+'%';
+  children[11].childNodes[1].innerHTML=this.value;"
+                />
+
+                <input
+                  type="range"
+                  tabindex="0"
+                  value="60"
+                  max="100"
+                  min="0"
+                  step="1"
+                  oninput="
+  this.value=Math.max(this.value,this.parentNode.childNodes[3].value-(-1));
+  var value=(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.value)-(100/(parseInt(this.max)-parseInt(this.min)))*parseInt(this.min);
+  var children = this.parentNode.childNodes[1].childNodes;
+  children[3].style.width=(100-value)+'%';
+  children[5].style.right=(100-value)+'%';
+  children[9].style.left=value+'%';children[13].style.left=value+'%';
+  children[13].childNodes[1].innerHTML=this.value;"
+                />
+              </div>
+            </div>
           </fieldset>
 
           <fieldset class="filter-item">
             <legend class="filter-title">Жирность:</legend>
-            <input
-              class="form-radio"
-              type="radio"
-              name="fat"
-              value="0-percent"
-              id="filter-0-percent"
-            />
-            <label class="form-label" for="filter-0-percent">0%</label>
-            <input
-              class="form-radio"
-              type="radio"
-              name="fat"
-              value="up-to-10-percent"
-              id="filter-up-to-10-percent"
-              checked
-            />
-            <label class="form-label" for="filter-up-to-10-percent"
-              >до 10%</label
-            >
-            <input
-              class="form-radio"
-              type="radio"
-              name="fat"
-              value="up-to-30-percent"
-              id="filter-up-to-30-percent"
-            />
-            <label class="form-label" for="filter-up-to-30-percent"
-              >до 30%</label
-            >
-            <input
-              class="form-radio"
-              type="radio"
-              name="fat"
-              value="above-30-percent"
-              id="filter-above-30-percent"
-            />
-            <label class="form-label" for="filter-above-30-percent"
-              >выше 30%</label
-            >
+            <div class="filter-item-row outline">
+              <div class="filter-item-radio">
+                <input
+                  class="form-radio"
+                  type="radio"
+                  name="fat"
+                  value="0-percent"
+                  id="filter-0-percent"
+                />
+                <label class="form-label" for="filter-0-percent">0%</label>
+              </div>
+
+              <div class="filter-item-radio">
+                <input
+                  class="form-radio"
+                  type="radio"
+                  name="fat"
+                  value="up-to-10-percent"
+                  id="filter-up-to-10-percent"
+                  checked
+                />
+                <label class="form-label" for="filter-up-to-10-percent"
+                  >до 10%</label
+                >
+              </div>
+
+              <div class="filter-item-radio">
+                <input
+                  class="form-radio"
+                  type="radio"
+                  name="fat"
+                  value="up-to-30-percent"
+                  id="filter-up-to-30-percent"
+                />
+                <label class="form-label" for="filter-up-to-30-percent"
+                  >до 30%</label
+                >
+              </div>
+
+              <div class="filter-item-radio disabled">
+                <input
+                  class="form-radio"
+                  type="radio"
+                  name="fat"
+                  value="above-30-percent"
+                  id="filter-above-30-percent"
+                  disabled
+                />
+                <label class="form-label" for="filter-above-30-percent"
+                  >выше 30%</label
+                >
+              </div>
+            </div>
           </fieldset>
 
-          <fieldset class="filter-item">
+          <fieldset class="filter-item new-line">
             <legend class="filter-title">Наполнители:</legend>
-            <input
-              class="form-checkbox"
-              type="checkbox"
-              name="chocolate"
-              id="filter-chocolate"
-            />
-            <label class="form-label" for="filter-chocolate">шоколадные</label>
-            <input
-              class="form-checkbox"
-              type="checkbox"
-              name="sugar-powders"
-              id="filter-sugar-powders"
-              checked
-            />
-            <label class="form-label" for="filter-sugar-powders"
-              >сахарные присыпки</label
-            >
-            <input
-              class="form-checkbox"
-              type="checkbox"
-              name="fruits"
-              id="filter-fruits"
-            />
-            <label class="form-label" for="filter-fruits">фрукты</label>
-            <input
-              class="form-checkbox"
-              type="checkbox"
-              name="syrups"
-              id="filter-syrups"
-            />
-            <label class="form-label" for="filter-syrups">сиропы</label>
-            <input
-              class="form-checkbox"
-              type="checkbox"
-              name="jams"
-              id="filter-jams"
-              checked
-            />
-            <label class="form-label" for="filter-jams">джемы</label>
+
+            <div class="filter-item-row outline">
+              <div class="filter-item-checkbox">
+                <input
+                  class="form-checkbox"
+                  type="checkbox"
+                  name="chocolate"
+                  id="filter-chocolate"
+                />
+                <label class="form-label" for="filter-chocolate"
+                  >шоколадные</label
+                >
+              </div>
+
+              <div class="filter-item-checkbox">
+                <input
+                  class="form-checkbox"
+                  type="checkbox"
+                  name="sugar-powders"
+                  id="filter-sugar-powders"
+                  checked
+                />
+                <label class="form-label" for="filter-sugar-powders"
+                  >сахарные присыпки</label
+                >
+              </div>
+
+              <div class="filter-item-checkbox">
+                <input
+                  class="form-checkbox"
+                  type="checkbox"
+                  name="fruits"
+                  id="filter-fruits"
+                />
+                <label class="form-label" for="filter-fruits">фрукты</label>
+              </div>
+
+              <div class="filter-item-checkbox">
+                <input
+                  class="form-checkbox"
+                  type="checkbox"
+                  name="syrups"
+                  id="filter-syrups"
+                />
+                <label class="form-label" for="filter-syrups">сиропы</label>
+              </div>
+
+              <div class="filter-item-checkbox disabled">
+                <input
+                  class="form-checkbox"
+                  type="checkbox"
+                  name="jams"
+                  id="filter-jams"
+                  disabled
+                />
+                <label class="form-label" for="filter-jams">джемы</label>
+              </div>
+            </div>
           </fieldset>
           <button class="filter-button" type="submit">Применить</button>
         </form>
@@ -755,7 +843,7 @@
           <li class="page-navigation-item">
             <a
               class="page-navigation-link"
-              href="blank.html"
+              href=""
               aria-label="Перейти на предыдущую страницу каталога"
             >
               <svg
@@ -774,7 +862,7 @@
           <li class="page-navigation-item">
             <a
               class="page-navigation-link page-navigation-link-active"
-              href="blank.html"
+              href=""
               aria-label="Вы находитесь на странице 1"
               >1</a
             >
@@ -782,7 +870,7 @@
           <li class="page-navigation-item">
             <a
               class="page-navigation-link"
-              href="blank.html"
+              href=""
               aria-label="Перейти на страницу 2 каталога"
               >2</a
             >
@@ -790,7 +878,7 @@
           <li class="page-navigation-item">
             <a
               class="page-navigation-link"
-              href="blank.html"
+              href=""
               aria-label="Перейти на страницу 3 каталога"
               >3</a
             >
@@ -798,7 +886,7 @@
           <li class="page-navigation-item">
             <a
               class="page-navigation-link"
-              href="blank.html"
+              href=""
               aria-label="Перейти на страницу 4 каталога"
               >4</a
             >
@@ -806,7 +894,7 @@
           <li class="page-navigation-item">
             <a
               class="page-navigation-link"
-              href="blank.html"
+              href=""
               aria-label="Перейти на страницу 5 каталога"
               >5</a
             >
@@ -814,7 +902,7 @@
           <li class="page-navigation-item">
             <a
               class="page-navigation-link"
-              href="blank.html"
+              href=""
               aria-label="Перейти на следующую страницу каталога"
             >
               <svg
@@ -840,7 +928,7 @@
           <li class="social-networks-item">
             <a
               class="social-networks-link"
-              href="blank.html"
+              href=""
               aria-label="Ссылка на наш Фейсбук"
             >
               <svg
@@ -865,7 +953,7 @@
           <li class="social-networks-item">
             <a
               class="social-networks-link"
-              href="blank.html"
+              href=""
               aria-label=" Ссылка на нашу страницу в Вконтакте"
             >
               <svg
@@ -895,7 +983,7 @@
           <li class="social-networks-item">
             <a
               class="social-networks-link"
-              href="blank.html"
+              href=""
               aria-label="Ссылка на наш Инстаграм"
             >
               <svg
@@ -929,7 +1017,7 @@
           <li class="social-networks-item">
             <a
               class="social-networks-link"
-              href="blank.html"
+              href=""
               aria-label="Ссылка на наш Твиттер"
             >
               <svg
@@ -960,10 +1048,11 @@
               src="img/heart.svg"
               width="15"
               height="13"
+              alt="Сердце"
             />
             <a
               class="footer-info-link person links"
-              href="blank.html"
+              href=""
               aria-label="Ссылка на информацию для поставщиков"
               >Для поставщиков</a
             >
@@ -971,7 +1060,7 @@
           <li class="footer-info-item">
             <a
               class="footer-info-link links"
-              href="blank.html"
+              href=""
               aria-label="Ссылка на наши документы"
               >Наши документы</a
             >
@@ -979,7 +1068,7 @@
           <li class="footer-info-item">
             <a
               class="footer-info-link links"
-              href="blank.html"
+              href=""
               aria-label="Ссылка на информацию о производстве"
               >О производстве</a
             >
@@ -987,7 +1076,7 @@
           <li class="footer-info-item">
             <a
               class="footer-info-link links"
-              href="blank.html"
+              href=""
               aria-label="Ссылка на экологические стандарты"
               >Экологические стандарты</a
             >
@@ -1002,8 +1091,8 @@
             height="39"
             alt="Логотип HTML Academy"
           />
-          <copyright class="developer-text"
-            >Сделано в
+          <div class="developer-text">
+            Сделано в
             <a
               class="developer-link links"
               href="https://htmlacademy.ru"
@@ -1011,7 +1100,7 @@
               >HTML Academy</a
             >
             © 2019
-          </copyright>
+          </div>
         </div>
       </div>
     </footer>
