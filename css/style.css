@@ -64,6 +64,20 @@
   --color53: rgba(0, 0, 0, 0.4);
   --color54: rgba(255, 255, 255, 0.4);
   --color55: rgba(255, 255, 255, 0.7);
+  --color56: repeating-linear-gradient(
+    -45deg,
+    #f8f7f4,
+    #f8f7f4 7px,
+    #92cdff 7px,
+    #92cdff 14px,
+    #f8f7f4 14px,
+    #f8f7f4 21px,
+    #fe9e90 21px,
+    #fe9e90 28px
+  );
+  --color57: #cad4cd;
+  --color58: rgba(0, 0, 0, 0.2);
+  --color59: red;
 
   --a: var(--basic-white);
   --body-color: var(--basic-white);
@@ -91,6 +105,7 @@
   --site-navigation-link-box-shadow-active: var(--color48);
   --site-navigation-link-decoration-color: var(--color3);
   --site-navigation-link-active: var(--color30);
+  --site-navigation-link-active-color: var(--basic-white);
   --site-navigation-button-text-hover: var(--color2);
   --site-navigation-button-background-hover: var(--basic-white);
   --dropdown-menu-link-color: var(--color2);
@@ -98,6 +113,7 @@
   --dropdown-menu-item-hover: var(--color23);
   --dropdown-menu-item-pressing: var(--color46);
   --dropdown-menu-item-active: var(--color30);
+  --dropdown-menu-item-selection-before-border-bottom: var(--color22);
   --dropdown-menu-link-active-text-color: var(--basic-white);
   --dropdown-menu-list-box-shadow: var(--color53);
   --navigation-button-color: var(--basic-white);
@@ -141,6 +157,7 @@
   --page-navigation-item-active: var(--color2);
   --page-navigation-item-active-background-color: var(--basic-white);
   --page-navigation-arrow: var(--basic-white);
+  --page-navigation-arrow-disable: var(--color3);
   --delimiter: var(--color3);
   --button-general-text: var(--basic-white);
   --button-general-text-shadow: var(--color38);
@@ -159,18 +176,21 @@
   --bg2-backlight: var(--color16);
   --bg3-backlight: var(--color18);
   --product-hover-background: var(--color3);
+  --product-hover-box-shadow: var(--color58);
   --product-price-text-shadow: var(--color44);
   --product-title-text-decoration-color: var(--color3);
   --color-news-title: var(--color2);
   --color-news-link: var(--color2);
   --subscription-color: var(--color19);
   --subscription-text: var(--color9);
+  --subscription-repeating-linear-gradient: var(--color56);
   --background-map-info: var(--color45);
   --backlight-filter-component: var(--color3);
   --backlight-filter-component-text: var(--basic-white);
   --backlight-filter-component-inner-text: var(--color2);
   --backlight-filter-component-arrow: var(--color31);
-  --modal-info-background: var(--color19);
+  --modal-info-background: var(--color26);
+  --modal-info-inner-background: var(--color19);
   --modal-info-title-color: var(--color2);
   --social-networks-link-hover-img-circle: var(--basic-white);
   --social-networks-link-active-img-circle: var(--basic-white);
@@ -178,6 +198,15 @@
   --social-networks-link-hover-img-stroke: var(--color6);
   --social-networks-link-img-circle: var(--color8);
   --social-networks-link-active-img-stroke: var(--color55);
+  --form-slider-info-inverse-background-color: var(--color57);
+  --form-slider-info-range-background-color: var(--basic-white);
+  --form-slider-info-thumb-background-color: var(--basic-white);
+  --form-slider-info-thumb-hover-box-shadow: var(--basic-white);
+  --form-slider-info-thumb-after-background: var(--color27);
+  --form-slider-info-sign-background-color: var(--color30);
+  --form-slider-info-sign-color: var(--basic-white);
+  --form-slider-info-sign-after-border-top-color: var(--color30);
+  --form-slider-input: var(--color59);
 }
 
 body {
@@ -284,7 +313,6 @@ img {
 
 .links-dark {
   color: var(--links-dark-text);
-  border-bottom: 1px solid var(--links-dark-decoration-color);
 }
 
 .links-dark:hover {
@@ -454,12 +482,24 @@ input[type="radio"].visually-hidden {
   background: var(--site-navigation-button-background-hover);
 }
 
+.navigation-container-item .site-navigation-button.have-goods {
+  color: var(--site-navigation-button-text-hover);
+  background: var(--site-navigation-button-background-hover);
+}
+
 .navigation-container-item .img-stroke {
   fill: var(--navigation-svg-color);
 }
 
 .navigation-container-item:hover .img-stroke {
   fill: var(--navigation-svg-color-hover);
+}
+
+.have-goods .img-stroke {
+  fill: var(--navigation-svg-color-hover);
+}
+
+.navigation-container-item .img-stroke {
 }
 
 .navigation-container-item .img-fill-basket-red {
@@ -636,7 +676,8 @@ input[type="radio"].visually-hidden {
   left: 6px;
   right: 9px;
   bottom: -5px;
-  border-bottom: 1px solid rgba(50, 50, 50, 0.2);
+  border-bottom: 1px solid
+    var(--dropdown-menu-item-selection-before-border-bottom);
 }
 
 .dropdown-menu-item:hover {
@@ -713,7 +754,7 @@ input[type="radio"].visually-hidden {
 .site-navigation-link-active:hover {
   margin: 4px -14px 0;
   padding: 5px 14px 8px;
-  color: var(--a);
+  color: var(--site-navigation-link-active-color);
   background-color: var(--site-navigation-link-active);
   border-radius: 26px;
   border: none;
@@ -757,6 +798,7 @@ input[type="radio"].visually-hidden {
 
 .site-navigation-button-img + .site-navigation-button-text {
   margin-left: 8px;
+  white-space: nowrap;
 }
 
 .site-navigation-info {
@@ -785,7 +827,7 @@ input[type="radio"].visually-hidden {
 
 .breadcrumbs-crumbs-road {
   padding: 0;
-  margin: 21px 0 0;
+  margin: 21px 0 -2px 0;
 }
 
 .breadcrumbs-crumbs-item {
@@ -861,6 +903,7 @@ input[type="radio"].visually-hidden {
 
 .slider-list-button {
   display: inline-block;
+  vertical-align: baseline;
   padding: 9px 40px;
   font-style: normal;
   font-weight: bold;
@@ -950,6 +993,7 @@ input[type="radio"].visually-hidden {
   margin: 0;
   line-height: normal;
   display: inline-block;
+  vertical-align: baseline;
   padding: 13px 22px;
   font-weight: bold;
   font-size: 18px;
@@ -971,9 +1015,9 @@ input[type="radio"].visually-hidden {
 .product:hover {
   z-index: 1;
   padding: 6px 13px 0;
-  margin: -6px -13px -200px;
+  margin: 32px -13px -76px;
   background: var(--product-hover-background);
-  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 20px 20px var(--product-hover-box-shadow);
 }
 
 .product.hit:before {
@@ -988,7 +1032,7 @@ input[type="radio"].visually-hidden {
 }
 
 .product-list {
-  margin: 0;
+  margin: 2px 0 0 0;
   padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -997,7 +1041,7 @@ input[type="radio"].visually-hidden {
 }
 
 .product-list-item {
-  margin-top: 39px;
+  margin-top: 38px;
 }
 
 .product-link {
@@ -1091,13 +1135,24 @@ input[type="radio"].visually-hidden {
   margin: 0 0 14px 0;
 }
 
-.info-list-img {
-  flex-shrink: 0;
-  margin-right: 6px;
+.info-list-item.ice-cream {
+  background: url("../img/ice-cream.svg") 0 0 no-repeat;
+}
+
+.info-list-item.cow {
+  background: url("../img/cow.svg") 0 0 no-repeat;
+}
+
+.info-list-item.eco {
+  background: url("../img/eco.svg") 0 0 no-repeat;
+}
+
+.info-list-item.thermometer {
+  background: url("../img/thermometer.svg") 0 0 no-repeat;
 }
 
 .info-list-text {
-  margin: 8px 0 0;
+  margin: 8px 0 0 55px;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -1143,17 +1198,7 @@ input[type="radio"].visually-hidden {
       var(--subscription-color),
       var(--subscription-color)
     ),
-    repeating-linear-gradient(
-      -45deg,
-      #f8f7f4,
-      #f8f7f4 7px,
-      #92cdff 7px,
-      #92cdff 14px,
-      #f8f7f4 14px,
-      #f8f7f4 21px,
-      #fe9e90 21px,
-      #fe9e90 28px
-    );
+    var(--subscription-repeating-linear-gradient);
   padding: 5px 6px;
   border-radius: 16px;
   background-origin: content-box, padding-box;
@@ -1266,7 +1311,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   padding: 0;
   align-items: center;
-  margin-top: 34px;
+  margin-top: 32px;
   margin-bottom: 35px;
 }
 
@@ -1317,7 +1362,7 @@ input[type="radio"].visually-hidden {
 .footer-info {
   display: flex;
   flex-wrap: wrap;
-  margin: 29px 0 30px 24px;
+  margin: 28px 0 30px 24px;
   padding: 0;
   justify-self: center;
   width: 327px;
@@ -1331,10 +1376,10 @@ input[type="radio"].visually-hidden {
   min-width: 143px;
 }
 
-.footer-info-img {
-  position: absolute;
-  left: -21px;
-  top: 7px;
+.footer-info-item.heart {
+  background: url("../img/heart.svg") 0 63% no-repeat;
+  margin-left: -22px;
+  padding-left: 22px;
 }
 
 .footer-info-link {
@@ -1365,7 +1410,7 @@ input[type="radio"].visually-hidden {
 }
 
 .catalog-filter {
-  margin-top: 24px;
+  margin-top: 25px;
 }
 
 .filter-item.new-line {
@@ -1498,11 +1543,11 @@ input[type="radio"].visually-hidden {
   opacity: 1;
 }
 
-.form-radio:disabled + .form-label::before {
-  pointer-events: none;
+.form-radio:disabled + .form-label {
+  cursor: default;
 }
 
-.filter-item-radio.disabled .form-label {
+.form-radio:disabled + .form-label::before {
   pointer-events: none;
   opacity: 0.4;
 }
@@ -1545,12 +1590,17 @@ input[type="radio"].visually-hidden {
   background-size: auto 20px;
 }
 
-.form-label:hover::before {
-  opacity: 1;
+.form-checkbox:disabled + .form-label {
+  cursor: default;
 }
-.filter-item-checkbox.disabled .form-label {
+
+.form-checkbox:disabled + .form-label::before {
   pointer-events: none;
   opacity: 0.4;
+}
+
+.form-label:hover::before {
+  opacity: 1;
 }
 
 .filter-button {
@@ -1636,7 +1686,7 @@ input[type="radio"].visually-hidden {
 }
 
 .page-navigation-arrow.disable {
-  fill: rgba(255, 255, 255, 0.2);
+  fill: var(--page-navigation-arrow-disable);
 }
 
 .footer-container {
@@ -1646,7 +1696,6 @@ input[type="radio"].visually-hidden {
 
 .delimiter {
   padding: 0;
-  width: 1146px;
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: var(--delimiter);
@@ -1659,7 +1708,7 @@ input[type="radio"].visually-hidden {
 
 .developer {
   max-width: 190px;
-  margin-top: 18px;
+  margin-top: 17px;
   margin-bottom: 25px;
   justify-self: end;
 }
@@ -1685,14 +1734,14 @@ input[type="radio"].visually-hidden {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--modal-info-background);
   display: none;
 }
 
 .modal-info-inner {
   padding: 20px 23px;
   width: 430px;
-  background: var(--modal-info-background);
+  background: var(--modal-info-inner-background);
   border-radius: 6px;
 }
 
@@ -1778,7 +1827,7 @@ input[type="radio"].visually-hidden {
   position: absolute;
   height: 2px;
   border-radius: 10px;
-  background-color: #cad4cd;
+  background-color: var(--form-slider-info-inverse-background-color);
   margin: 0 7px;
 }
 
@@ -1795,7 +1844,7 @@ input[type="radio"].visually-hidden {
   left: 0;
   height: 2px;
   border-radius: 14px;
-  background-color: #fff;
+  background-color: var(--form-slider-info-range-background-color);
 }
 
 .form-slider-info-thumb {
@@ -1807,13 +1856,13 @@ input[type="radio"].visually-hidden {
   text-align: left;
   margin-left: -10px;
   cursor: pointer;
-  background-color: #fff;
+  background-color: var(--form-slider-info-thumb-background-color);
   border-radius: 50%;
   outline: none;
 }
 
 .form-slider-info-thumb:hover {
-  box-shadow: 0 0 0 1px #fff;
+  box-shadow: 0 0 0 1px var(--form-slider-info-thumb-hover-box-shadow);
 }
 
 .form-slider-info-thumb::after {
@@ -1822,7 +1871,7 @@ input[type="radio"].visually-hidden {
   width: 4px;
   height: 4px;
   margin: 8px;
-  background: #ababab;
+  background: var(--form-slider-info-thumb-after-background);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -1863,27 +1912,27 @@ input[type="radio"].visually-hidden {
   pointer-events: all;
   width: 28px;
   height: 28px;
-  border-radius: 0px;
+  border-radius: 0;
   border: 0 none;
-  background: red;
+  background: var(--form-slider-input);
 }
 
 .form-slider > input[type="range"]::-moz-range-thumb {
   pointer-events: all;
   width: 28px;
   height: 28px;
-  border-radius: 0px;
+  border-radius: 0;
   border: 0 none;
-  background: red;
+  background: var(--form-slider-input);
 }
 
 .form-slider > input[type="range"]::-webkit-slider-thumb {
   pointer-events: all;
   width: 28px;
   height: 28px;
-  border-radius: 0px;
+  border-radius: 0;
   border: 0 none;
-  background: red;
+  background: var(--form-slider-input);
   -webkit-appearance: none;
 }
 
@@ -1907,8 +1956,8 @@ input[type="radio"].visually-hidden {
   margin-left: -14px;
   top: -49px;
   z-index: 3;
-  background-color: #d07058;
-  color: #fff;
+  background-color: var(--form-slider-info-sign-background-color);
+  color: var(--form-slider-info-sign-color);
   width: 28px;
   height: 28px;
   border-radius: 28px;
@@ -1930,7 +1979,7 @@ input[type="radio"].visually-hidden {
   border-right: 14px solid transparent;
   border-top-width: 16px;
   border-top-style: solid;
-  border-top-color: #d07058;
+  border-top-color: var(--form-slider-info-sign-after-border-top-color);
 }
 
 .form-slider-info .form-slider-info-sign-text {

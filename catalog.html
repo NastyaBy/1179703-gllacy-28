@@ -198,7 +198,7 @@
 
           <div class="navigation-container-item basket">
             <button
-              class="site-navigation-button last"
+              class="site-navigation-button last have-goods"
               type="button"
               aria-label="Кнопка просмотра карзины"
             >
@@ -477,6 +477,7 @@
                   name="fat"
                   value="above-30-percent"
                   id="filter-above-30-percent"
+                  disabled
                 />
                 <label class="form-label" for="filter-above-30-percent"
                   >выше 30%</label
@@ -541,8 +542,11 @@
                   type="checkbox"
                   name="jams"
                   id="filter-jams"
+                  disabled
                 />
-                <label class="form-label" for="filter-jams">джемы</label>
+                <label class="form-label disabled" for="filter-jams"
+                  >джемы</label
+                >
               </div>
             </div>
           </fieldset>
@@ -552,296 +556,272 @@
 
       <section class="product-catalog">
         <ul class="product-list">
-          <li class="product-list-item">
-            <div class="product">
-              <div class="product-img-wrapper">
-                <img
-                  class="product-img"
-                  src="img/product-1.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"
-                />
-              </div>
-              <strong class="product-price">310 ₽<sub>/кг</sub></strong>
-              <h3 class="product-title">
-                Сливочное с апельсиновым джемом и цитрусовой стружкой
-              </h3>
-              <a
-                class="product-link button-general"
-                href="#"
-                aria-label="Быстрый просмотр"
-                >Быстрый просмотр</a
-              >
+          <li class="product-list-item product">
+            <div class="product-img-wrapper">
+              <img
+                class="product-img"
+                src="img/product-1.png"
+                width="267"
+                height="267"
+                alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"
+              />
             </div>
+            <strong class="product-price">310 ₽<sub>/кг</sub></strong>
+            <h3 class="product-title">
+              Сливочное с апельсиновым джемом и цитрусовой стружкой
+            </h3>
+            <a
+              class="product-link button-general"
+              href="#"
+              aria-label="Быстрый просмотр"
+              >Быстрый просмотр</a
+            >
           </li>
 
-          <li class="product-list-item">
-            <div class="product">
-              <div class="product-img-wrapper">
-                <img
-                  class="product-img"
-                  src="img/product-2.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочно-кофейное с кусочками шоколада"
-                />
-              </div>
-              <strong class="product-price">380 ₽<sub>/кг</sub></strong>
-              <h3 class="product-title">
-                Сливочно-кофейное с кусочками шоколада
-              </h3>
-              <a
-                class="product-link button-general"
-                href="#"
-                aria-label="Быстрый просмотр"
-                >Быстрый просмотр</a
-              >
+          <li class="product-list-item product">
+            <div class="product-img-wrapper">
+              <img
+                class="product-img"
+                src="img/product-2.png"
+                width="267"
+                height="267"
+                alt="Сливочно-кофейное с кусочками шоколада"
+              />
             </div>
+            <strong class="product-price">380 ₽<sub>/кг</sub></strong>
+            <h3 class="product-title">
+              Сливочно-кофейное с кусочками шоколада
+            </h3>
+            <a
+              class="product-link button-general"
+              href="#"
+              aria-label="Быстрый просмотр"
+              >Быстрый просмотр</a
+            >
           </li>
 
-          <li class="product-list-item">
-            <div class="product">
-              <div class="product-img-wrapper">
-                <img
-                  class="product-img"
-                  src="img/product-3.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочно-клубничное с присыпкой из белого шоколада"
-                />
-              </div>
-              <strong class="product-price">355 ₽<sub>/кг</sub></strong>
-
-              <h3 class="product-title">
-                Сливочно-клубничное с присыпкой&nbsp;из белого шоколада
-              </h3>
-              <a
-                class="product-link button-general"
-                href="#"
-                aria-label="Быстрый просмотр"
-                >Быстрый просмотр</a
-              >
+          <li class="product-list-item product">
+            <div class="product-img-wrapper">
+              <img
+                class="product-img"
+                src="img/product-3.png"
+                width="267"
+                height="267"
+                alt="Сливочно-клубничное с присыпкой из белого шоколада"
+              />
             </div>
+            <strong class="product-price">355 ₽<sub>/кг</sub></strong>
+
+            <h3 class="product-title">
+              Сливочно-клубничное с присыпкой&nbsp;из белого шоколада
+            </h3>
+            <a
+              class="product-link button-general"
+              href="#"
+              aria-label="Быстрый просмотр"
+              >Быстрый просмотр</a
+            >
           </li>
 
-          <li class="product-list-item">
-            <div class="product">
-              <div class="product-img-wrapper">
-                <img
-                  class="product-img"
-                  src="img/product-4.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочное крем-брюле с карамельной подливкой"
-                />
-              </div>
-              <strong class="product-price">415 ₽<sub>/кг</sub></strong>
-              <h3 class="product-title">
-                Сливочное крем-брюле с&nbsp;карамельной подливкой
-              </h3>
-              <a
-                class="product-link button-general"
-                href="#"
-                aria-label="Быстрый просмотр"
-                >Быстрый просмотр</a
-              >
+          <li class="product-list-item product">
+            <div class="product-img-wrapper">
+              <img
+                class="product-img"
+                src="img/product-4.png"
+                width="267"
+                height="267"
+                alt="Сливочное крем-брюле с карамельной подливкой"
+              />
             </div>
+            <strong class="product-price">415 ₽<sub>/кг</sub></strong>
+            <h3 class="product-title">
+              Сливочное крем-брюле с&nbsp;карамельной подливкой
+            </h3>
+            <a
+              class="product-link button-general"
+              href="#"
+              aria-label="Быстрый просмотр"
+              >Быстрый просмотр</a
+            >
           </li>
 
-          <li class="product-list-item">
-            <div class="product">
-              <div class="product-img-wrapper">
-                <img
-                  class="product-img"
-                  src="img/product-5.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочное с брусничным джемом"
-                />
-              </div>
-              <strong class="product-price">325 ₽<sub>/кг</sub></strong>
-              <h3 class="product-title">
-                Сливочное с брусничным<br />
-                джемом
-              </h3>
-              <a
-                class="product-link button-general"
-                href="#"
-                aria-label="Быстрый просмотр"
-                >Быстрый просмотр</a
-              >
+          <li class="product-list-item product">
+            <div class="product-img-wrapper">
+              <img
+                class="product-img"
+                src="img/product-5.png"
+                width="267"
+                height="267"
+                alt="Сливочное с брусничным джемом"
+              />
             </div>
+            <strong class="product-price">325 ₽<sub>/кг</sub></strong>
+            <h3 class="product-title">
+              Сливочное с брусничным<br />
+              джемом
+            </h3>
+            <a
+              class="product-link button-general"
+              href="#"
+              aria-label="Быстрый просмотр"
+              >Быстрый просмотр</a
+            >
           </li>
 
-          <li class="product-list-item">
-            <div class="product">
-              <div class="product-img-wrapper">
-                <img
-                  class="product-img"
-                  src="img/product-6.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочно-черничное с цельными ягодами черники"
-                />
-              </div>
-              <strong class="product-price">410 ₽<sub>/кг</sub></strong>
-              <h3 class="product-title">
-                Сливочно-черничное с цельными ягодами черники
-              </h3>
-              <a
-                class="product-link button-general"
-                href="#"
-                aria-label="Быстрый просмотр"
-                >Быстрый просмотр</a
-              >
+          <li class="product-list-item product">
+            <div class="product-img-wrapper">
+              <img
+                class="product-img"
+                src="img/product-6.png"
+                width="267"
+                height="267"
+                alt="Сливочно-черничное с цельными ягодами черники"
+              />
             </div>
+            <strong class="product-price">410 ₽<sub>/кг</sub></strong>
+            <h3 class="product-title">
+              Сливочно-черничное с цельными ягодами черники
+            </h3>
+            <a
+              class="product-link button-general"
+              href="#"
+              aria-label="Быстрый просмотр"
+              >Быстрый просмотр</a
+            >
           </li>
 
-          <li class="product-list-item">
-            <div class="product">
-              <div class="product-img-wrapper">
-                <img
-                  class="product-img"
-                  src="img/product-7.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочно-лимонное с карамельной присыпкой"
-                />
-              </div>
-              <strong class="product-price">315 ₽<sub>/кг</sub></strong>
-              <h3 class="product-title">
-                Сливочно-лимонное с карамельной присыпкой
-              </h3>
-              <a
-                class="product-link button-general"
-                href="#"
-                aria-label="Быстрый просмотр"
-                >Быстрый просмотр</a
-              >
+          <li class="product-list-item product">
+            <div class="product-img-wrapper">
+              <img
+                class="product-img"
+                src="img/product-7.png"
+                width="267"
+                height="267"
+                alt="Сливочно-лимонное с карамельной присыпкой"
+              />
             </div>
+            <strong class="product-price">315 ₽<sub>/кг</sub></strong>
+            <h3 class="product-title">
+              Сливочно-лимонное с карамельной присыпкой
+            </h3>
+            <a
+              class="product-link button-general"
+              href="#"
+              aria-label="Быстрый просмотр"
+              >Быстрый просмотр</a
+            >
           </li>
 
-          <li class="product-list-item">
-            <div class="product">
-              <div class="product-img-wrapper">
-                <img
-                  class="product-img"
-                  src="img/product-8.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочное с шоколадной стружкой"
-                />
-              </div>
-              <strong class="product-price">320 ₽<sub>/кг</sub></strong>
-              <h3 class="product-title">
-                Сливочное с шоколадной<br />
-                стружкой
-              </h3>
-              <a
-                class="product-link button-general"
-                href="#"
-                aria-label="Быстрый просмотр"
-                >Быстрый просмотр</a
-              >
+          <li class="product-list-item product">
+            <div class="product-img-wrapper">
+              <img
+                class="product-img"
+                src="img/product-8.png"
+                width="267"
+                height="267"
+                alt="Сливочное с шоколадной стружкой"
+              />
             </div>
+            <strong class="product-price">320 ₽<sub>/кг</sub></strong>
+            <h3 class="product-title">
+              Сливочное с шоколадной<br />
+              стружкой
+            </h3>
+            <a
+              class="product-link button-general"
+              href="#"
+              aria-label="Быстрый просмотр"
+              >Быстрый просмотр</a
+            >
           </li>
 
-          <li class="product-list-item">
-            <div class="product">
-              <div class="product-img-wrapper">
-                <img
-                  class="product-img"
-                  src="img/product-9.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочно-ванильное с кусочками шоколада"
-                />
-              </div>
-              <strong class="product-price">440 ₽<sub>/кг</sub></strong>
-              <h3 class="product-title">
-                Сливочно-ванильное с&nbsp;кусочками&nbsp;шоколада
-              </h3>
-              <a
-                class="product-link button-general"
-                href="#"
-                aria-label="Быстрый просмотр"
-                >Быстрый просмотр</a
-              >
+          <li class="product-list-item product">
+            <div class="product-img-wrapper">
+              <img
+                class="product-img"
+                src="img/product-9.png"
+                width="267"
+                height="267"
+                alt="Сливочно-ванильное с кусочками шоколада"
+              />
             </div>
+            <strong class="product-price">440 ₽<sub>/кг</sub></strong>
+            <h3 class="product-title">
+              Сливочно-ванильное с&nbsp;кусочками&nbsp;шоколада
+            </h3>
+            <a
+              class="product-link button-general"
+              href="#"
+              aria-label="Быстрый просмотр"
+              >Быстрый просмотр</a
+            >
           </li>
 
-          <li class="product-list-item">
-            <div class="product">
-              <div class="product-img-wrapper">
-                <img
-                  class="product-img"
-                  src="img/product-10.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочноe с ментоловым сиропом"
-                />
-              </div>
-              <strong class="product-price">435 ₽<sub>/кг</sub></strong>
-              <h3 class="product-title">
-                Сливочноe с ментоловым<br />
-                сиропом
-              </h3>
-              <a
-                class="product-link button-general"
-                href="#"
-                aria-label="Быстрый просмотр"
-                >Быстрый просмотр</a
-              >
+          <li class="product-list-item product">
+            <div class="product-img-wrapper">
+              <img
+                class="product-img"
+                src="img/product-10.png"
+                width="267"
+                height="267"
+                alt="Сливочноe с ментоловым сиропом"
+              />
             </div>
+            <strong class="product-price">435 ₽<sub>/кг</sub></strong>
+            <h3 class="product-title">
+              Сливочноe с ментоловым<br />
+              сиропом
+            </h3>
+            <a
+              class="product-link button-general"
+              href="#"
+              aria-label="Быстрый просмотр"
+              >Быстрый просмотр</a
+            >
           </li>
 
-          <li class="product-list-item">
-            <div class="product">
-              <div class="product-img-wrapper">
-                <img
-                  class="product-img"
-                  src="img/product-11.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочное с кусочками черного шоколада"
-                />
-              </div>
-              <strong class="product-price">355 ₽<sub>/кг</sub></strong>
-              <h3 class="product-title">
-                Сливочное с кусочками черного шоколада
-              </h3>
-              <a
-                class="product-link button-general"
-                href="#"
-                aria-label="Быстрый просмотр"
-                >Быстрый просмотр</a
-              >
+          <li class="product-list-item product">
+            <div class="product-img-wrapper">
+              <img
+                class="product-img"
+                src="img/product-11.png"
+                width="267"
+                height="267"
+                alt="Сливочное с кусочками черного шоколада"
+              />
             </div>
+            <strong class="product-price">355 ₽<sub>/кг</sub></strong>
+            <h3 class="product-title">
+              Сливочное с кусочками черного шоколада
+            </h3>
+            <a
+              class="product-link button-general"
+              href="#"
+              aria-label="Быстрый просмотр"
+              >Быстрый просмотр</a
+            >
           </li>
 
-          <li class="product-list-item">
-            <div class="product">
-              <div class="product-img-wrapper">
-                <img
-                  class="product-img"
-                  src="img/product-12.png"
-                  width="267"
-                  height="267"
-                  alt="Сливочное с мятным сиропом"
-                />
-              </div>
-              <strong class="product-price">420 ₽<sub>/кг</sub></strong>
-              <h3 class="product-title">
-                Сливочное с мятным сиропом
-              </h3>
-              <a
-                class="product-link button-general"
-                href="#"
-                aria-label="Быстрый просмотр"
-                >Быстрый просмотр</a
-              >
+          <li class="product-list-item product">
+            <div class="product-img-wrapper">
+              <img
+                class="product-img"
+                src="img/product-12.png"
+                width="267"
+                height="267"
+                alt="Сливочное с мятным сиропом"
+              />
             </div>
+            <strong class="product-price">420 ₽<sub>/кг</sub></strong>
+            <h3 class="product-title">
+              Сливочное с мятным сиропом
+            </h3>
+            <a
+              class="product-link button-general"
+              href="#"
+              aria-label="Быстрый просмотр"
+              >Быстрый просмотр</a
+            >
           </li>
         </ul>
 
@@ -1048,14 +1028,7 @@
         </ul>
 
         <ul class="footer-info">
-          <li class="footer-info-item">
-            <img
-              class="footer-info-img"
-              src="img/heart.svg"
-              width="15"
-              height="13"
-              alt="Сердце"
-            />
+          <li class="footer-info-item heart">
             <a
               class="footer-info-link person links"
               href=""
