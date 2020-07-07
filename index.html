@@ -16,13 +16,12 @@
       <div class="container header">
         <div class="navigation-container">
           <nav class="navigation">
-            <a class="main-header-logo">
+            <a class="main-header-logo" tabindex="1">
               <img
                 src="img/logo.svg"
-                width="154px"
-                height="64px"
+                width="154"
+                height="64"
                 alt="Логотип Gllacy Shop"
-                tabindex="1"
               />
             </a>
 
@@ -96,7 +95,6 @@
           <div class="navigation-container-item search">
             <a
               class="site-navigation-button search"
-              type="button"
               aria-label="Кнопка поиска"
               tabindex="5"
             >
@@ -132,7 +130,6 @@
           <div class="navigation-container-item login">
             <a
               class="site-navigation-button"
-              type="button"
               aria-label="Кнопка входа"
               tabindex="6"
             >
@@ -208,7 +205,6 @@
             <a
               class="site-navigation-button last"
               tabindex="7"
-              type="button"
               aria-label="Кнопка просмотра карзины"
             >
               <svg
@@ -498,12 +494,14 @@
               слать всякой ненужной ерунды. Честно =)
             </p>
             <form class="subscription-form">
-              <input
-                class="subscription-input input-text"
-                type="text"
-                placeholder="email@example.com"
-                aria-label="Введите ваш email для рассылки"
-              />
+              <label class="input-text-wrapper">
+                <input
+                  class="input-text"
+                  type="text"
+                  placeholder="email@example.com"
+                  aria-label="Введите ваш email для рассылки"
+                />
+              </label>
               <button
                 class="subscription-button button-general"
                 aria-label="Кнопка подписаться на рассылку"
@@ -545,7 +543,7 @@
             <p class="map-info-desc">(с 10 до 20 ежедневно)</p>
             <a
               class="map-info-button button-general"
-              href=""
+              href="blank.html"
               aria-label="Кнопка написать нам"
             >
               Форма обратной связи
