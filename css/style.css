@@ -134,6 +134,7 @@
   --basket-text-color: var(--color2);
   --info-title: var(--color2);
   --info-list-text: var(--color2);
+  --map-background: var(--color3);
   --map-info-label: var(--color2);
   --address-text: var(--color2);
   --map-info-tel: var(--color2);
@@ -1238,6 +1239,7 @@ input[type="radio"].visually-hidden {
 .map {
   position: relative;
   padding: 62px 0;
+  background: var(--map-background);
 }
 
 .map-img {
