@@ -248,7 +248,7 @@
       <div class="container">
         <div class="slider">
           <ul class="slider-list">
-            <li class="slider-list-item slide slide-current">
+            <li class="slider-list-item slide js-slide-current">
               <img
                 class="slider-list-img"
                 src="img/slaid-1.png"
@@ -259,11 +259,15 @@
               <h2 class="slider-list-title">
                 Крем-брюле и пломбир с&nbsp;малиновым джемом
               </h2>
-              <a class="slider-list-button button-general" href="#" tabindex="9"
+              <a
+                class="slider-list-button button-general"
+                aria-label="Купить крем-брюле и пломбир с малиновым джемом"
+                href="#"
+                tabindex="9"
                 >Давайте оба!</a
               >
             </li>
-            <li class="slider-list-item slide" style="display: none;">
+            <li class="slider-list-item slide">
               <img
                 class="slider-list-img"
                 src="img/slaid-2.png"
@@ -274,11 +278,14 @@
               <h2 class="slider-list-title">
                 Шоколадный пломбир и&nbsp;лимонный сорбет
               </h2>
-              <a class="slider-list-button button-general" href="#"
+              <a
+                class="slider-list-button button-general"
+                aria-label="Купить шоколадный пломбир и лимонный сорбет"
+                href="#"
                 >Давайте оба!</a
               >
             </li>
-            <li class="slider-list-item slide" style="display: none;">
+            <li class="slider-list-item slide">
               <img
                 class="slider-list-img"
                 src="img/slaid-3.png"
@@ -289,7 +296,10 @@
               <h2 class="slider-list-title">
                 Пломбир с помадкой и&nbsp;клубничный щербет
               </h2>
-              <a class="slider-list-button button-general" href="#"
+              <a
+                class="slider-list-button button-general"
+                aria-label="Купить пломбир с помадкой и клубничный щербет"
+                href="#"
                 >Давайте оба!</a
               >
             </li>
@@ -297,7 +307,7 @@
 
           <div class="slider-navigation">
             <button
-              class="slider-navigation-button current"
+              class="slider-navigation-button js-current"
               type="button"
               aria-label="Крем-брюле и пломбир с малиновым джемом"
             ></button>
@@ -354,12 +364,17 @@
                   src="img/product-1.png"
                   width="267"
                   height="267"
-                  alt="Сливочное с апельсиновым джемом и цитрусовой стружкой"
+                  alt="Хит! Сливочное с апельсиновым джемом и цитрусовой стружкой"
                 />
               </div>
               <strong class="product-price">310 ₽<sub>/кг</sub></strong>
               <h3 class="product-title">
-                Сливочное с апельсиновым джемом и цитрусовой стружкой
+                <a
+                  class="links"
+                  href="#"
+                  aria-label="Хит! Сливочное с апельсиновым джемом и цитрусовой стружкой"
+                  >Сливочное с апельсиновым джемом и цитрусовой стружкой</a
+                >
               </h3>
               <a
                 class="product-link button-general"
@@ -376,13 +391,18 @@
                   src="img/product-2.png"
                   width="267"
                   height="267"
-                  alt="Сливочно-кофейное с кусочками шоколада"
+                  alt="Хит! Сливочно-кофейное с кусочками шоколада"
                 />
               </div>
               <strong class="product-price">380 ₽<sub>/кг</sub></strong>
 
               <h3 class="product-title">
-                Сливочно-кофейное с кусочками шоколада
+                <a
+                  class="links"
+                  href="#"
+                  aria-label="Хит! Сливочно-кофейное с кусочками шоколада"
+                  >Сливочно-кофейное с кусочками шоколада</a
+                >
               </h3>
               <a
                 class="product-link button-general"
@@ -399,13 +419,20 @@
                   src="img/product-3.png"
                   width="267"
                   height="267"
-                  alt="Сливочно-клубничное с присыпкой из белого шоколада"
+                  alt="Хит! Сливочно-клубничное с присыпкой из белого шоколада"
                 />
               </div>
               <strong class="product-price">355 ₽<sub>/кг</sub></strong>
 
               <h3 class="product-title">
-                Сливочно-клубничное с&nbsp;присыпкой&nbsp;из белого шоколада
+                <a
+                  class="links"
+                  href="#"
+                  aria-label="Хит! Сливочно-клубничное с присыпкой из белого
+                  шоколада"
+                  >Сливочно-клубничное с&nbsp;присыпкой&nbsp;из белого
+                  шоколада</a
+                >
               </h3>
               <a
                 class="product-link button-general"
@@ -422,12 +449,17 @@
                   src="img/product-4.png"
                   width="267"
                   height="267"
-                  alt="Сливочное крем-брюле с карамельной подливкой"
+                  alt="Хит! Сливочное крем-брюле с карамельной подливкой"
                 />
               </div>
               <strong class="product-price">415 ₽<sub>/кг</sub></strong>
               <h3 class="product-title">
-                Сливочное крем-брюле с&nbsp;карамельной подливкой
+                <a
+                  class="links"
+                  href="#"
+                  aria-label="Хит! Сливочное крем-брюле с карамельной подливкой"
+                  >Сливочное крем-брюле с&nbsp;карамельной подливкой</a
+                >
               </h3>
               <a
                 class="product-link button-general"
@@ -518,9 +550,6 @@
         <iframe
           class="map-img"
           src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab862952b17e28c3dd68a494cc4a34456fff32980eb16571f56775f674070cac8&amp;source=constructor"
-          width="100%"
-          height="430"
-          frameborder="0"
         ></iframe>
         <div class="container">
           <div class="map-info">
@@ -544,7 +573,7 @@
             <a
               class="map-info-button button-general"
               href="blank.html"
-              aria-label="Кнопка написать нам"
+              aria-label="Написать нам"
             >
               Форма обратной связи
             </a>
@@ -795,5 +824,6 @@
         </form>
       </div>
     </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>
