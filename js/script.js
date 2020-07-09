@@ -1,49 +1,56 @@
-var slider = document.querySelectorAll(".slider-list-item");
-var sliderBtn = document.querySelectorAll(".slider-navigation-button");
-var popupFeedback = document.querySelector(".modal-info");
-var popupFeedbackBtn = document.querySelectorAll(".map-info-button");
-var popupFeedbackCloseBtn = document.querySelectorAll(
-  ".modal-info-close-button"
-);
+var popupFeedback = document.querySelector(".js-popupFeedback");
+var popupFeedbackBtn = document.querySelector(".js-popupFeedbackBtn");
+var popupFeedbackCloseBtn = document.querySelector(".js-popupFeedbackCloseBtn");
+var sliderItem = document.querySelectorAll(".js-sliderItem");
+var sliderDot = document.querySelectorAll(".js-sliderDot");
 
 // slider
-slider[0].addEventListener("click", function (evt) {
-  evt.preventDefault();
-  toggleSlider();
-});
+var slideIndex = 1;
+showSlides(slideIndex);
 
-sliderBtn[0].addEventListener("click", function (evt) {
-  evt.preventDefault();
-  toggleSliderBtn();
-});
-
-function toggleSlider() {
-  slider.classList.add("js-slide-current");
+function current(n) {
+  showSlides((slideIndex = n));
 }
 
-function toggleSliderBtn() {
-  sliderBtn.classList.add("js-current");
+function showSlides(n) {
+  var i;
+
+  if (n > sliderItem.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = sliderItem.length;
+  }
+  for (i = 0; i < sliderItem.length; i++) {
+    sliderItem[i].style.display = "none";
+  }
+  for (i = 0; i < sliderDot.length; i++) {
+    sliderDot[i].className = sliderDot[i].className.replace(" current", "");
+  }
+  sliderItem[slideIndex - 1].style.display = "block";
+  sliderDot[slideIndex - 1].className += " current";
 }
+
 // popup
-popupFeedbackBtn[0].addEventListener("click", function (evt) {
+popupFeedbackBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   togglePopupFeedback();
 });
 
-popupFeedbackCloseBtn[0].addEventListener("click", function (evt) {
+popupFeedbackCloseBtn.addEventListener("click", function (evt) {
   evt.preventDefault();
   togglePopupFeedback();
 });
 
 function togglePopupFeedback() {
-  popupFeedback.classList.toggle("js-show");
+  popupFeedback.classList.toggle("show");
 }
 
-// window.addEventListener("keydown", function (evt) {
-//   if (evt.keyCode === 27) {
-//     if (popupFeedback.classList.contains("modal-info")) {
-//       evt.preventDefault();
-// popupFeedback.classList.remove("modal-info")
-//     }
-//   }
-// });
+window.addEventListener("keydown", function (evt) {
+  if (evt.keyCode === 27) {
+    if (popupFeedback.classList.contains("show")) {
+      evt.preventDefault();
+      togglePopupFeedback();
+    }
+  }
+});

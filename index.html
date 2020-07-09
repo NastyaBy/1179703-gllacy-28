@@ -248,7 +248,7 @@
       <div class="container">
         <div class="slider">
           <ul class="slider-list">
-            <li class="slider-list-item slide js-slide-current">
+            <li class="slider-list-item slide current js-sliderItem">
               <img
                 class="slider-list-img"
                 src="img/slaid-1.png"
@@ -267,7 +267,7 @@
                 >Давайте оба!</a
               >
             </li>
-            <li class="slider-list-item slide">
+            <li class="slider-list-item slide js-sliderItem">
               <img
                 class="slider-list-img"
                 src="img/slaid-2.png"
@@ -285,7 +285,7 @@
                 >Давайте оба!</a
               >
             </li>
-            <li class="slider-list-item slide">
+            <li class="slider-list-item slide js-sliderItem">
               <img
                 class="slider-list-img"
                 src="img/slaid-3.png"
@@ -307,20 +307,23 @@
 
           <div class="slider-navigation">
             <button
-              class="slider-navigation-button js-current"
+              class="slider-navigation-button current js-sliderDot"
               type="button"
+              onclick="current(1)"
               aria-label="Крем-брюле и пломбир с малиновым джемом"
             ></button>
 
             <button
-              class="slider-navigation-button"
+              class="slider-navigation-button js-sliderDot"
               type="button"
+              onclick="current(2)"
               aria-label="Шоколадный пломбир и лимонный сорбет"
             ></button>
 
             <button
-              class="slider-navigation-button"
+              class="slider-navigation-button js-sliderDot"
               type="button"
+              onclick="current(3)"
               aria-label="Пломбир с помадкой и клубничный щербет"
             ></button>
           </div>
@@ -571,7 +574,7 @@
             >
             <p class="map-info-desc">(С 10 до 20 ежедневно)</p>
             <a
-              class="map-info-button button-general"
+              class="map-info-button button-general js-popupFeedbackBtn"
               href="blank.html"
               aria-label="Написать нам"
             >
@@ -762,11 +765,14 @@
       </div>
     </footer>
 
-    <div class="modal-info">
+    <div class="modal-info js-popupFeedback">
       <div class="modal-info-inner">
         <header class="modal-info-header">
           <h2 class="modal-info-title">Мы обязательно вам ответим!</h2>
-          <button class="modal-info-close-button" aria-label="Закрыть форму">
+          <button
+            class="modal-info-close-button js-popupFeedbackCloseBtn"
+            aria-label="Закрыть форму"
+          >
             <svg
               width="18"
               height="17"
