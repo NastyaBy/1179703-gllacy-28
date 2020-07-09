@@ -43,13 +43,13 @@
   --color38: rgba(160, 32, 11, 0.76);
   --color39: rgba(172, 16, 0, 0.64);
   --color40: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.2)
-    ),
-    linear-gradient(180deg, #f26843 0%, #e74a35 100%);
+    0deg,
+    rgba(255, 255, 255, 0.2),
+    rgba(255, 255, 255, 0.2)
+  ),
+  linear-gradient(180deg, #f26843 0%, #e74a35 100%);
   --color41: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
-    linear-gradient(180deg, #f26843 0%, #e74a35 100%);
+  linear-gradient(180deg, #f26843 0%, #e74a35 100%);
   --color42: #ac1000;
   --color43: #942718;
   --color44: rgba(49, 50, 53, 0.5);
@@ -664,8 +664,7 @@ input[type="radio"].visually-hidden {
   left: 6px;
   right: 9px;
   bottom: -5px;
-  border-bottom: 1px solid
-    var(--dropdown-menu-item-selection-before-border-bottom);
+  border-bottom: 1px solid var(--dropdown-menu-item-selection-before-border-bottom);
 }
 
 .dropdown-menu-item:hover {
@@ -803,6 +802,7 @@ input[type="radio"].visually-hidden {
   line-height: 16px;
   margin-top: 0;
   margin-bottom: 8px;
+  text-transform: lowercase;
 }
 
 .site-navigation-tel {
@@ -1189,10 +1189,10 @@ input[type="radio"].visually-hidden {
 
 .subscription {
   background: linear-gradient(
-      var(--subscription-color),
-      var(--subscription-color)
-    ),
-    var(--subscription-repeating-linear-gradient);
+    var(--subscription-color),
+    var(--subscription-color)
+  ),
+  var(--subscription-repeating-linear-gradient);
   padding: 5px 6px;
   border-radius: 16px;
   background-origin: content-box, padding-box;
@@ -1238,7 +1238,7 @@ input[type="radio"].visually-hidden {
 .map {
   position: relative;
   padding: 62px 0;
-  background: var(--map-background) url("../img/map.jpg");
+  background: var(--map-background) url("../img/map.jpg") 50% 50% no-repeat;
 }
 
 .map-img {
@@ -1298,6 +1298,7 @@ input[type="radio"].visually-hidden {
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
+  text-transform: lowercase;
   color: var(--map-info-desc);
 }
 
@@ -1428,7 +1429,7 @@ input[type="radio"].visually-hidden {
 .filter-item-checkbox {
   display: flex;
   align-items: center;
-  margin-right: 20px;
+  margin-right: 23px;
 }
 
 .filter-title {
@@ -1456,16 +1457,14 @@ input[type="radio"].visually-hidden {
   height: 0;
   border-style: solid;
   border-width: 10px 5.5px 0 5.5px;
-  border-color: var(--backlight-filter-component-arrow) transparent transparent
-    transparent;
+  border-color: var(--backlight-filter-component-arrow) transparent transparent transparent;
   margin-left: -14px;
   margin-right: 14px;
   pointer-events: none;
 }
 
 .form-select:hover:after {
-  border-color: var(--form-select-hover-after) transparent transparent
-    transparent;
+  border-color: var(--form-select-hover-after) transparent transparent transparent;
 }
 
 .form-select:hover .form-select-input {
@@ -1480,6 +1479,7 @@ input[type="radio"].visually-hidden {
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
+  text-transform: lowercase;
   background: none;
   border: none;
   -moz-appearance: none;
@@ -1534,6 +1534,10 @@ input[type="radio"].visually-hidden {
 .form-radio:checked + .form-label::before {
   background: url("../img/radio-on.svg") 0 50% no-repeat;
   background-size: 20px 20px;
+}
+
+.form-label {
+  text-transform: lowercase;
 }
 
 .form-label:hover::before {
@@ -1735,6 +1739,8 @@ input[type="radio"].visually-hidden {
 
 .js-show {
   display: flex;
+  animation-name: bounce;
+  animation-duration: 0.6s;
 }
 
 .modal-info-inner {
@@ -1886,4 +1892,22 @@ input[type="radio"].visually-hidden {
 
 .thumb-right {
   left: 67%;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
