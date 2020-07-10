@@ -1539,7 +1539,7 @@ input[type="radio"].visually-hidden {
   height: 22px;
   flex-shrink: 0;
   flex-grow: 0;
-  margin-right: 8px;
+  margin-right: 9px;
   background: url("../img/radio-off.svg") 0 50% no-repeat;
   background-size: 20px 20px;
   opacity: 0.8;
