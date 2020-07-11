@@ -31,25 +31,15 @@
   --color30: #d07058;
   --color31: #ecf1ee;
   --color32: rgba(248, 247, 244, 0.5);
-  --color33: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
+  --color33: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
   --color34: #2c2829;
   --color35: #cacac7;
   --color36: #c4c4c4;
   --color37: #1e90ff;
   --color38: rgba(160, 32, 11, 0.76);
   --color39: rgba(172, 16, 0, 0.64);
-  --color40: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.2)
-    ),
-    linear-gradient(180deg, #f26843 0%, #e74a35 100%);
-  --color41: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)),
-    linear-gradient(180deg, #f26843 0%, #e74a35 100%);
+  --color40: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), linear-gradient(180deg, #f26843 0%, #e74a35 100%);
+  --color41: linear-gradient(0deg, rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.07)), linear-gradient(180deg, #f26843 0%, #e74a35 100%);
   --color42: #ac1000;
   --color43: #942718;
   --color44: rgba(49, 50, 53, 0.5);
@@ -64,17 +54,7 @@
   --color53: rgba(0, 0, 0, 0.4);
   --color54: rgba(255, 255, 255, 0.4);
   --color55: rgba(255, 255, 255, 0.7);
-  --color56: repeating-linear-gradient(
-    -45deg,
-    #f8f7f4,
-    #f8f7f4 7px,
-    #92cdff 7px,
-    #92cdff 14px,
-    #f8f7f4 14px,
-    #f8f7f4 21px,
-    #fe9e90 21px,
-    #fe9e90 28px
-  );
+  --color56: repeating-linear-gradient(-45deg, #f8f7f4, #f8f7f4 7px, #92cdff 7px, #92cdff 14px, #f8f7f4 14px, #f8f7f4 21px, #fe9e90 21px, #fe9e90 28px);
   --color57: #cad4cd;
   --color58: rgba(0, 0, 0, 0.2);
 
@@ -151,9 +131,7 @@
   --page-navigation-link: var(--basic-white);
   --page-navigation-link-hover-background: var(--color3);
   --page-navigation-link-active-background-color: var(--basic-white);
-  --page-navigation-link-hover-page-navigation-link-active-background-color: var(
-    --basic-white
-  );
+  --page-navigation-link-hover-page-navigation-link-active-background-color: var(--basic-white);
   --page-navigation-item-active: var(--color2);
   --page-navigation-item-active-background-color: var(--basic-white);
   --page-navigation-arrow: var(--basic-white);
@@ -226,6 +204,10 @@ a {
 img {
   max-width: 100%;
   height: auto;
+}
+
+*:focus {
+  outline: 2px solid var(--input-text-focus);
 }
 
 .button-general {
@@ -343,6 +325,7 @@ input[type="radio"].visually-hidden {
   display: grid;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
+  transition: background-color 0.2s ease;
 }
 
 .page-body-bg1 {
@@ -664,8 +647,7 @@ input[type="radio"].visually-hidden {
   left: 6px;
   right: 9px;
   bottom: -5px;
-  border-bottom: 1px solid
-    var(--dropdown-menu-item-selection-before-border-bottom);
+  border-bottom: 1px solid var(--dropdown-menu-item-selection-before-border-bottom);
 }
 
 .dropdown-menu-item:hover {
@@ -949,7 +931,7 @@ input[type="radio"].visually-hidden {
   column-gap: 26px;
   padding: 0;
   margin-top: 40px;
-  margin-bottom: 1px;
+  margin-bottom: 2px;
   list-style-type: none;
 }
 
@@ -1010,7 +992,7 @@ input[type="radio"].visually-hidden {
 .product:hover {
   z-index: 1;
   padding: 6px 13px 0;
-  margin: 32px -13px -76px;
+  margin: 31px -13px -76px;
   background: var(--product-hover-background);
   box-shadow: 0 20px 20px var(--product-hover-box-shadow);
 }
@@ -1036,7 +1018,7 @@ input[type="radio"].visually-hidden {
 }
 
 .product-list-item {
-  margin-top: 38px;
+  margin-top: 37px;
 }
 
 .product-link {
@@ -1200,11 +1182,7 @@ input[type="radio"].visually-hidden {
 }
 
 .subscription {
-  background: linear-gradient(
-      var(--subscription-color),
-      var(--subscription-color)
-    ),
-    var(--subscription-repeating-linear-gradient);
+  background: linear-gradient(var(--subscription-color), var(--subscription-color)), var(--subscription-repeating-linear-gradient);
   padding: 5px 6px;
   border-radius: 16px;
   background-origin: content-box, padding-box;
@@ -1316,10 +1294,10 @@ input[type="radio"].visually-hidden {
 
 .map-info-button {
   margin: 0;
-  line-height: normal;
   padding: 11px 18px;
-  font-weight: bold;
   font-size: 18px;
+  font-weight: bold;
+  line-height: 21px;
 }
 
 .social-networks {
@@ -1414,13 +1392,13 @@ input[type="radio"].visually-hidden {
 
 .filter-item {
   border: none;
-  margin: 0 15px 15px 0;
+  margin: 0 15px 12px 0;
   padding: 0;
 }
 
 .catalog-filter {
   margin-top: 25px;
-  margin-bottom: 2px;
+  margin-bottom: 3px;
 }
 
 .filter-item.new-line {
@@ -1441,15 +1419,19 @@ input[type="radio"].visually-hidden {
 .filter-item-checkbox {
   display: flex;
   align-items: center;
-  margin-right: 23px;
+  margin-top: -1px;
+  margin-right: 22px;
 }
 
 .filter-title {
   margin-left: 16px;
-  margin-bottom: 6px;
+  margin-bottom: 9px;
   font-size: 14px;
   font-weight: 500;
   line-height: 16px;
+}
+.filter-title.filter-title-checkbox {
+  margin-bottom: 10px;
 }
 
 .form-select {
@@ -1469,16 +1451,14 @@ input[type="radio"].visually-hidden {
   height: 0;
   border-style: solid;
   border-width: 10px 5.5px 0 5.5px;
-  border-color: var(--backlight-filter-component-arrow) transparent transparent
-    transparent;
-  margin-left: -14px;
+  border-color: var(--backlight-filter-component-arrow) transparent transparent transparent;
+  margin-left: -28px;
   margin-right: 14px;
   pointer-events: none;
 }
 
 .form-select:hover:after {
-  border-color: var(--form-select-hover-after) transparent transparent
-    transparent;
+  border-color: var(--form-select-hover-after) transparent transparent transparent;
 }
 
 .form-select:hover .form-select-input {
@@ -1488,7 +1468,7 @@ input[type="radio"].visually-hidden {
 .form-select-input {
   min-width: 185px;
   height: 36px;
-  padding: 0 16px;
+  padding: 0 38px 0 16px;
   color: var(--backlight-filter-component-text);
   font-size: 16px;
   font-weight: 500;
@@ -1499,7 +1479,7 @@ input[type="radio"].visually-hidden {
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  outline: none;
+
   cursor: pointer;
 }
 
@@ -1518,6 +1498,8 @@ input[type="radio"].visually-hidden {
   display: flex;
   align-items: center;
   margin-right: 20px;
+  margin-top: -1px;
+  margin-bottom: -2px;
 }
 
 .form-radio {
@@ -1548,6 +1530,10 @@ input[type="radio"].visually-hidden {
 .form-radio:checked + .form-label::before {
   background: url("../img/radio-on.svg") 0 50% no-repeat;
   background-size: 20px 20px;
+}
+
+.form-radio:focus + .form-label {
+  outline: 2px solid var(--input-text-focus);
 }
 
 .form-label {
@@ -1614,26 +1600,29 @@ input[type="radio"].visually-hidden {
   opacity: 0.4;
 }
 
-.form-label:hover::before {
+.form-checkbox:focus + .form-label {
+  outline: 2px solid var(--input-text-focus);
+}
+
+.form-checkbox:not(:disabled) + .form-label:hover::before {
   opacity: 1;
 }
 
 .filter-button {
-  padding: 7px 28px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 18px;
+  min-width: 144px;
+  padding: 7px 20px;
   color: var(--filter-button);
-  box-sizing: border-box;
-  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 18px;
   text-align: center;
   vertical-align: top;
   text-decoration: none;
   cursor: pointer;
-  outline: none;
   background: var(--backlight-filter-component);
   border: 2px solid var(--filter-button-border);
+  box-sizing: border-box;
+  border-radius: 20px;
 }
 
 .filter-button:hover {
@@ -1652,7 +1641,7 @@ input[type="radio"].visually-hidden {
 .page-navigation {
   display: flex;
   justify-content: flex-end;
-  margin: 75px -15px 0 0;
+  margin: 77px -15px 0 0;
   padding-bottom: 29px;
 }
 
@@ -1685,9 +1674,7 @@ input[type="radio"].visually-hidden {
 
 .page-navigation-link:hover.page-navigation-link-active {
   color: var(--page-navigation-item-active);
-  background-color: var(
-    --page-navigation-link-hover-page-navigation-link-active-background-color
-  );
+  background-color: var(--page-navigation-link-hover-page-navigation-link-active-background-color);
 }
 
 .page-navigation-link:active {
@@ -1885,7 +1872,6 @@ input[type="radio"].visually-hidden {
   cursor: pointer;
   background-color: var(--form-slider-info-thumb-background-color);
   border-radius: 50%;
-  outline: none;
 }
 
 .form-slider-info-thumb:hover {

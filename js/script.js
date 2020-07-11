@@ -1,6 +1,7 @@
 var popupFeedback = document.querySelector(".js-popupFeedback");
 var popupFeedbackBtn = document.querySelector(".js-popupFeedbackBtn");
 var popupFeedbackCloseBtn = document.querySelector(".js-popupFeedbackCloseBtn");
+var sliderBg = document.querySelector(".js-sliderBg");
 var sliderItem = document.querySelectorAll(".js-sliderItem");
 var sliderDot = document.querySelectorAll(".js-sliderDot");
 
@@ -27,6 +28,7 @@ function showSlides(n) {
   for (i = 0; i < sliderDot.length; i++) {
     sliderDot[i].className = sliderDot[i].className.replace(" current", "");
   }
+  sliderBg.className = sliderBg.className.replace(/\b page-body-bg.+?\b/g, " page-body-bg" + n);
   sliderItem[slideIndex - 1].style.display = "block";
   sliderDot[slideIndex - 1].className += " current";
 }
